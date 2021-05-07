@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+    <h1>edit </h1>
+    <form action="/articles/<%= article._id %>?_method=PUT" method="POST">
+        <div>
+            <label for='seq'>Seq:</label>
+            <input type="text" name= "seq" placeholder="seq" value=<%= article.seq %> >
+        </div>
+        <div>
+            <label for='title'>Title:</label>
+            <input type="text" name= "title" placeholder="title" value='<%= article.title %>' >
+        </div>
+        <div>
+            <label for='metadata/refSrc'>metadata/refSrc:</label>
+            <input type="text" name= "metadata/refSrc"  value='<%= article['metadata/refSrc'] %>' >
+        </div>
+        <div>
+            <label for='metatags/author'>metatags/author:</label>
+            <input type="text" name= "metatags/author" placeholder="metatags/author" value='<%= article['metatags/author'] %>' >
+        </div>
+        <div>
+            <label for='metadata/author'>metadata/author:</label>
+            <input type="text" name= "metadata/author" placeholder="metadata/author" value='<%= article['metadata/author'] %>' >
+        </div>
+        <div>
+            <label for='compilation_name'>compilation_name:</label>
+            <input type="text" name= "compilation_name" placeholder="compilation_name" value='<%= article['compilation_name'] %>' >
+        </div>
+        <div>
+            <label for='metadata/seriesname'>metadata/seriesname:</label>
+            <input type="text" name= "metadata/seriesname" placeholder="metadata/seriesname" value='<%= article['metadata/seriesname'] %>' >
+        </div>
+        <div>
+            <label for='metadata/seriessubsidiary'>metadata/seriessubsidiary:</label>
+            <input type="text" name= "metadata/seriessubsidiary" placeholder="metadata/seriessubsidiary" value='<%= article['metadata/seriessubsidiary'] %>' >
+        </div>
+        <div>
+            <label for='metadata/seriesno'>metadata/seriesno:</label>
+            <input type="text" name= "metadata/seriesno" placeholder="metadata/seriesno" value='<%= article['metadata/seriesno'] %>' >
+        </div>
+        <div>
+            <label for='compilation_vol'>compilation_vol:</label>
+            <input type="text" name= "compilation_vol" placeholder="compilation_vol" value='<%= article['compilation_vol'] %>' >
+        </div>
+        <div>
+            <label for='time_orig_str'>time_orig_str:</label>
+            <input type="text" name= "time_orig_str" placeholder="time_orig_str" value='<%= article['time_orig_str'] %>' >
+        </div>
+        <div>
+            <label for='metadata/publish_date'>metadata/publish_date:</label>
+            <input type="text" name= "metadata/publish_date" placeholder="metadata/publish_date" value='<%= article['metadata/publish_date'] %>' >
+        </div>
+        <div>
+            <label for='year_for_grouping'>year_for_grouping:</label>
+            <input type="text" name= "year_for_grouping" placeholder="year_for_grouping" value='<%= article['year_for_grouping'] %>' >
+        </div>
+        <div>
+            <label for='metadata/compilation_page'>metadata/compilation_page:</label>
+            <input type="text" name= "metadata/compilation_page" placeholder="metadata/compilation_page" value='<%= article['metadata/compilation_page'] %>' >
+        </div>
+        <div>
+            <label for='metadata/publisher_location'>metadata/publisher_location:</label>
+            <input type="text" name= "metadata/publisher_location" placeholder="metadata/publisher_location" value='<%= article['metadata/publisher_location'] %>' >
+        </div>
+        <div>
+            <label for='geo_level1'>geo_level1:</label>
+            <input type="text" name= "geo_level1" placeholder="geo_level1" value='<%= article['geo_level1'] %>' >
+        </div>
+        <div>
+            <label for='geo_level2'>geo_level2:</label>
+            <input type="text" name= "geo_level2" placeholder="geo_level2" value='<%= article['geo_level2'] %>' >
+        </div>
+        <div>
+            <label for='geo_level3'>geo_level3:</label>
+            <input type="text" name= "geo_level3" placeholder="geo_level3" value='<%= article['geo_level3'] %>' >
+        </div>
+        <div>
+            <label for='geo_longitude'>geo_longitude:</label>
+            <input type="text" name= "geo_longitude" placeholder="geo_longitude" value='<%= article['geo_longitude'] %>' >
+        </div>
+        <div>
+            <label for='geo_latitude'>geo_latitude:</label>
+            <input type="text" name= "geo_latitude" placeholder="geo_latitude" value='<%= article['geo_latitude'] %>' >
+        </div>
+        <button>Submit</button>
+    </form>
+    
+</body>
+
+
+
+</html>

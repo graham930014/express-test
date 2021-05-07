@@ -1,0 +1,92 @@
+<style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid #c0c0c0;
+      width: 300px;
+    }
+    th,td {
+      border: 1px solid #d0d0d0;
+      color: #404060;
+      padding: 10px;
+    }
+    th {
+      background-color: #09c;
+      font: bold 16px "微軟雅黑";
+      color: #fff;
+    }
+    td {
+      font: 14px "微軟雅黑";
+      text-align: center;
+    }
+    </style>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+    <h1>Data table</h1>
+     
+    <table>
+        <thead>
+        <tr>
+          <th>seq</th>
+          <th>title</th>
+          <th>metadata/refSrc</th>
+          <th>metatags/author</th>
+          <th>metadata/author</th>
+          <th>compilation_name</th>
+          <th>metadata/seriesname</th>
+          <th>metadata/seriessubsidiary</th>
+          <th>metadata/seriesno</th>
+          <th>compilation_vol</th>
+          <th>time_orig_str</th>
+          <th>metadata/publish_date</th>
+          <th>year_for_grouping</th>
+          <th>metadata/compilation_page</th>
+          <th>metadata/publisher_location</th>
+          <th>geo_level1</th>
+          <th>geo_level2</th>
+          <th>geo_level3</th>
+          <th>geo_longitude</th>
+          <th>geo_latitude</th>
+          
+        </tr>
+        </thead>
+
+        <tbody>
+        <% for(let article of articles) { %> 
+        <tr>
+            <td><a href= "/articles/<%= article._id %>"><%= article.seq %></a> </td>
+            <td><%= article.title %> </td>
+            <td><%= article['metadata/refSrc'] %> </td>
+            <td><%= article['metatags/author'] %> </td>
+            <td><%= article['metadata/author'] %> </td>
+            <td><%= article['compilation_name'] %> </td>
+            <td><%= article['metadata/seriesname'] %> </td>
+            <td><%= article['metadata/seriessubsidiary'] %> </td>
+            <td><%= article['metadata/seriesno'] %> </td>
+            <td><%= article['compilation_vol'] %> </td>
+            <td><%= article['time_orig_str'] %> </td>
+            <td><%= article['metadata/publish_date'] %> </td>
+            <td><%= article['year_for_grouping'] %> </td>
+            <td><%= article['metadata/compilation_page'] %> </td>
+            <td><%= article['metadata/publisher_location'] %> </td>
+            <td><%= article['geo_level1'] %> </td>
+            <td><%= article['geo_level2'] %> </td>
+            <td><%= article['geo_level3'] %> </td>
+            <td><%= article['geo_longitude'] %> </td>
+            <td><%= article['geo_latitude'] %> </td>
+            
+        </tr>
+        <% } %> 
+        
+        </tbody>
+    </table>
+</body>
+
+
+
+</html>

@@ -1,0 +1,58 @@
+const mongoose = require('mongoose');
+
+const articleSchema = new mongoose.Schema({
+    'seq': {type:String},
+    'metadata/refSrc':{type:String},
+    'title':{type:String},
+    'metadata/author.href':{type:String},
+    'metatags/author':{type:String},
+    'metadata/author':{type:String},
+    'compilation_name':{type:String},
+    // 'metadata/compilation_name':{type:String},
+    // 'metadata/compilation_name.href':{type:String},
+    'metadata/seriesname':{type:String},
+    'metadata/seriessubsidiary':{type:String},
+    'metadata/seriesno':{type:String},
+    'compilation_vol':{type:String},
+    'metadata/compilation_vol':{type:String},
+    'time_orig_str':{type:String},
+    'metadata/publish_date':{type:String},
+    'year_for_grouping':{type:String},
+    'metadata/compilation_page':{type:String},
+    // 'metadata/publisher':{type:String},
+    'metadata/publisher_location':{type:String},
+    'geo_level1':{type:String},
+    'geo_level2':{type:String},
+    'geo_level3':{type:String},
+    'geo_longitude':{type:Number},
+    'geo_latitude':{type:Number},
+    // 'metadata/publisher.href':{type:String},
+    'doctype':{type:String},
+    'metadata/doctype':{type:String},
+    'metadata/biliography_language':{type:String},
+    'metadata/remark':{type:String},
+    'metadata/remarkcontent':{type:String},
+    'metatags/keywords':{type:String},
+    'metadata/keywords':{type:String},
+    'abstract':{type:String},
+    'metadata/tablecontent':{type:String},
+    'book_code':{type:String},
+    'metadata/book_code':{type:String},
+    'metadata/edition':{type:String},
+    'metadata/fulltextSrc':{type:String},
+    'metadata/category':{type:String},
+    'metadata/period':{type:String},
+    'metadata/area':{type:String},
+    'metadata/place':{type:String},
+    'metadata/institution':{type:String},
+    'metadata/department':{type:String},
+    'metadata/publicationyear':{type:String},
+    'metadata/degree':{type:String},
+    'metadata/doi':{type:String},
+    'doc_source':{type:String}
+})
+
+const Article = mongoose.model('Article', articleSchema);
+module.exports = Article;
+
+
